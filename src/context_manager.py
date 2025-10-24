@@ -1,19 +1,3 @@
-# # src/context_manager.py
-# from src.db_manager import DBManager
-
-# class ContextManager:
-#     def __init__(self, db: DBManager):
-#         self.db = db
-
-#     def update_context_from_card(self, card):
-#         # store the last assignee and last keywords as quick context entries
-#         if card.assignee:
-#             self.db.update_context("last_assignee", card.assignee)
-#         if card.context_keywords:
-#             self.db.update_context("last_keywords", ",".join(card.context_keywords))
-
-
-# src/context_manager.py
 from src.db_manager import DBManager
 import json
 
