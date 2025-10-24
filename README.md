@@ -155,10 +155,10 @@ cd Contextual-Personal-Assistant
 pip install uv
 
 # Default environment
-uv venv
+uv venv --python 3.10
 # or
 # Custom environment name
-uv venv custom-env-name
+uv venv custom-env-name --python 3.10
 ```
 
 **Activate the virtual environment:**
@@ -187,20 +187,27 @@ custom-env-name\Scripts\Activate.ps1
 custom-env-name\Scripts\activate.bat
 ```
 
-**3. Install dependencies (if not already done via `uv`)**
+**3. Ensure pip is installed and upgraded**
+
+```bash
+python -m ensurepip
+python -m pip install --upgrade pip
+```
+
+**4. Install dependencies**
 
 ```bash
 uv pip install -r requirements.txt
 ```
 
-**4. Validate SpaCy Model**
+**5. Validate SpaCy Model**
 
 ```bash
 python -m spacy validate
 python -m spacy download en_core_web_sm
 ```
 
-**5. Run the Streamlit App**
+**6. Run the Streamlit App**
 
 ```bash
 streamlit run app.py
