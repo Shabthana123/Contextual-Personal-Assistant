@@ -203,8 +203,13 @@ uv pip install -r requirements.txt
 **5. Validate SpaCy Model**
 
 ```bash
+python -m spacy download en_core_web_md
+# or
+pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.7.1/en_core_web_md-3.7.1.tar.gz
+
+
 python -m spacy validate
-python -m spacy download en_core_web_sm
+
 ```
 
 **6. Run the Streamlit App**
