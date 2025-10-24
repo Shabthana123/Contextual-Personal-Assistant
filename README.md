@@ -113,6 +113,7 @@ streamlit run app.py
 
 **Example Output:**
 
+```
 {
 "id": 1,
 "description": "Call Sarah about the Q3 budget next Monday",
@@ -128,6 +129,7 @@ streamlit run app.py
 ],
 "envelope_id": 1
 }
+```
 
 ## 🟢 Ups & Achievements
 
