@@ -140,6 +140,10 @@ streamlit run app.py
 - **Zero-Cost Prototyping:** Local models enable development without API limitations.
 - **Interactive Frontend:** Streamlit allows easy testing and visualization of results.
 
+## AI-Assisted Development
+
+During development, AI tools were used selectively to support idea generation, coding assistance, workflow planning, and prototyping suggestions. Core design decisions, architecture planning, and the implementation of both the Ingestion & Organization Agent and the Thinking Agent design were done manually, ensuring full technical ownership while leveraging AI to enhance productivity and problem-solving.
+
 ## 🔴 Challenges & Lessons Learned
 
 - **Model Output Consistency:** LLM sometimes outputs verbose or inconsistent results; solved with prompt refinement.
