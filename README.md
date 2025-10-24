@@ -2,8 +2,6 @@
 
 This project implements an AI-powered agentic framework that ingests, organizes, and structures user notes into actionable “Cards” such as Tasks, Reminders, and Ideas. It demonstrates autonomous knowledge management, modular architecture, and future-ready reasoning capabilities.
 
----
-
 ## 🚀 Project Overview
 
 The goal of this project was to design a personal assistant that can:
@@ -15,8 +13,6 @@ The goal of this project was to design a personal assistant that can:
 5. Provide a foundation for proactive reasoning and recommendations through a separate **Thinking Agent**.
 
 This demonstrates a full **agentic AI workflow**: **Ingestion → Structuring → Storage → Contextual Reasoning**.
-
----
 
 ## 🧩 Ingestion & Organization Agent (Implemented)
 
@@ -56,8 +52,6 @@ The core of the project is the **Ingestion & Organization Agent**, which process
 - Semantic similarity and contextual keyword boosting assign notes to the most relevant envelope automatically.
 - Lightweight local models ensure zero API costs and fast prototyping.
 
----
-
 ## 🧠 Thinking Agent (Planned Implementation)
 
 A **Thinking Agent** is designed as the next stage of this framework. While it is not yet implemented, the architecture has been fully planned.
@@ -81,8 +75,6 @@ A **Thinking Agent** is designed as the next stage of this framework. While it i
 - Offline, local LLMs reduce cost while supporting multi-step reasoning.
 - Structured prompt chains enforce consistency and prevent ambiguous outputs.
 - SQLite ensures the reasoning agent works on the same dataset as the ingestion agent, maintaining modularity and simplicity.
-
----
 
 ## ⚙️ Setup & Running Instructions
 
@@ -117,8 +109,6 @@ streamlit run app.py
 - The agent classifies it, extracts entities, and assigns it to the correct envelope.
 - Cards and envelopes are stored in SQLite and displayed in the frontend.
 
----
-
 ## 🟢 Ups & Achievements
 
 - **Modular Architecture:** Clear separation of ingestion, extraction, context, and storage modules.
@@ -128,8 +118,6 @@ streamlit run app.py
 - **Zero-Cost Prototyping:** Local models enable development without API limitations.
 - **Interactive Frontend:** Streamlit allows easy testing and visualization of results.
 
----
-
 ## 🔴 Challenges & Lessons Learned
 
 - **Model Output Consistency:** LLM sometimes outputs verbose or inconsistent results; solved with prompt refinement.
@@ -137,8 +125,6 @@ streamlit run app.py
 - **Entity Extraction Complexity:** Handling dynamic team names and ambiguous references required hybrid regex + NLP approach.
 - **Context Linking:** Associating extracted entities with envelopes while avoiding duplicates required iterative debugging.
 - **Version Compatibility:** Keeping LangChain, Transformers, and SpaCy aligned to avoid breaking changes.
-
----
 
 ### Architecture & Workflow
 
@@ -199,8 +185,6 @@ The following diagram illustrates the workflow of the Contextual Personal Assist
 
 This diagram provides a high-level view of how user notes are processed, structured, and persisted, along with the planned Thinking Agent for proactive suggestions.
 
----
-
 ## 💡 Key Learnings
 
 - Designing agentic pipelines requires **modularity and clear separation of concerns**.
@@ -209,12 +193,8 @@ This diagram provides a high-level view of how user notes are processed, structu
 - Systematic context and semantic similarity evaluation improve automated organization accuracy.
 - Local LLMs are sufficient for prototype functionality, balancing cost, performance, and scalability.
 
----
-
 ## ⚡ Summary
 
 This project demonstrates a **fully functional Ingestion & Organization Agent**, capable of converting freeform notes into structured **Cards and Envelopes**. It also includes a **planned architecture for a Thinking Agent** that will analyze stored knowledge and provide intelligent recommendations.
 
 By combining **LLMs, NLP, database management, and modular agentic design**, this project showcases my ability to build **scalable, cost-effective, and intelligent AI systems**, highlighting strong ML engineering and system design skills.
-
----
