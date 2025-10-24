@@ -109,6 +109,26 @@ streamlit run app.py
 - The agent classifies it, extracts entities, and assigns it to the correct envelope.
 - Cards and envelopes are stored in SQLite and displayed in the frontend.
 
+![Contextual Personal Assistant Interface](images/interface.png)
+
+**Example Output:**
+
+{
+"id": 1,
+"description": "Call Sarah about the Q3 budget next Monday",
+"card_type": "Task",
+"date_text": "Monday",
+"date_parsed": "2025-10-27T00:00:00",
+"assignee": "Sarah",
+"context_keywords": [
+"sarah",
+"q3",
+"budget",
+"monday"
+],
+"envelope_id": 1
+}
+
 ## 🟢 Ups & Achievements
 
 - **Modular Architecture:** Clear separation of ingestion, extraction, context, and storage modules.
