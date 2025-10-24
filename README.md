@@ -142,26 +142,65 @@ A **Thinking Agent** is designed as the next stage of this framework. While it i
 
 ## ⚙️ Setup & Running Instructions
 
-**1. Environment Setup**
+**1. Clone the Repository**
 
 ```bash
-# Create virtual environment
-python -m venv .venv
-# Activate
-# Windows
-.\.venv\Scripts\activate
-# Linux/Mac
+git clone https://github.com/Shabthana123/Contextual-Personal-Assistant.git
+cd Contextual-Personal-Assistant
+```
+
+**2. Create Virtual Environment & Install Dependencies (Preferred: `uv`)**
+
+```bash
+pip install uv
+
+# Default environment
+uv venv
+# or
+# Custom environment name
+uv venv custom-env-name
+```
+
+**Activate the virtual environment:**
+
+- **macOS / Linux**
+
+```bash
 source .venv/bin/activate
+# or
+source custom-env-name/bin/activate
+```
 
-# Install dependencies
-pip install -r requirements.txt
+- **Windows (PowerShell)**
 
-# Validate SpaCy model
+```powershell
+.venv\Scripts\Activate.ps1
+# or
+custom-env-name\Scripts\Activate.ps1
+```
+
+- **Windows (Command Prompt)**
+
+```cmd
+.venv\Scripts\activate.bat
+# or
+custom-env-name\Scripts\activate.bat
+```
+
+**3. Install dependencies (if not already done via `uv`)**
+
+```bash
+uv pip install -r requirements.txt
+```
+
+**4. Validate SpaCy Model**
+
+```bash
 python -m spacy validate
 python -m spacy download en_core_web_sm
 ```
 
-**2. Running the Streamlit App**
+**5. Run the Streamlit App**
 
 ```bash
 streamlit run app.py
