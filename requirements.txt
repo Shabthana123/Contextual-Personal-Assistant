@@ -1,5 +1,5 @@
 # Core NLP and ML
-spacy==3.6.1
+spacy==3.7.0
 sentence-transformers==2.2.2
 scikit-learn==1.3.2
 dateparser==1.1.8
@@ -18,47 +18,3 @@ python-dotenv==1.0.0
 
 # Testing
 pytest==7.4.2
-
-# pip install -U spacy==3.7.0
-# python -m spacy validate
-python -m spacy download en_core_web_sm
-
-
-
-
-# # Core NLP and ML
-# spacy
-# sentence-transformers
-# scikit-learn
-# dateparser
-
-# # Web Interface
-# streamlit
-
-# # Utilities
-# rich
-# python-dotenv
-
-# # Testing
-# pytest
-
-# langchain
-# langchain-openai
-# langchain-core
-# langchain-community
-# langchain-ollama
-# langchain-text-splitters
-# # openai
-
-# # llama-index
-
-
-# spacy==3.7.2
-# langchain==0.2.14
-# langchain-openai==0.1.10
-# en-core-web-md @ https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.7.0/en_core_web_md-3.7.0.tar.gz
-# dateparser==1.2.0
-# openai==1.43.0
-# sqlite-utils==3.36
-# python-dotenv==1.0.1
-# tqdm==4.66.5
