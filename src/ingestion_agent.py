@@ -80,9 +80,31 @@ class IngestionAgent:
         env = Envelope(name=name)
         return self.db.add_envelope(env)
 
-    def process_note(self, note: str) -> dict:
+    def process_note(
+        self,
+        note: str,
+        assignee_override: Optional[str] = None,
+        date_override: Optional[str] = None,
+        keywords_override: Optional[List[str]] = None
+    ) -> dict:
+        """
+        Main processing function:
+        - Extract entities from note
+        - Override with LLM-suggested assignee/date/keywords if provided
+        - Classify card type
+        - Assign envelope
+        - Create & store card
+        """
         note_text = note.strip()
         entities = self.extractor.extract(note_text)
+        # Override with LLM output if provided
+        if assignee_override:
+            entities["assignee"] = assignee_override
+        if date_override:
+            entities["date_text"] = date_override
+        if keywords_override:
+            entities["context_keywords"] = keywords_override
+            
         card_type = self.classify_card_type(note_text)
 
         # Commit DB before envelope assignment
