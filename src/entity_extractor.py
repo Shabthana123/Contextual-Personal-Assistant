@@ -1,5 +1,3 @@
-# src/entity_extractor.py
-
 import spacy
 from dateparser.search import search_dates
 from typing import Dict, Any, List

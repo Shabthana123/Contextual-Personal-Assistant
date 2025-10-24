@@ -1,4 +1,3 @@
-# src/ingestion_agent.py
 from src.entity_extractor import EntityExtractor
 from src.card_model import Card, Envelope
 from src.db_manager import DBManager

@@ -1,4 +1,3 @@
-# src/db_manager.py
 import sqlite3
 from pathlib import Path
 import json

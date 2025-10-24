@@ -1,5 +1,3 @@
-# src/ingestion_agent_lc.py
-
 from langchain.chains import LLMChain
 from langchain.prompts import PromptTemplate
 from langchain.llms import HuggingFacePipeline

@@ -1,5 +1,3 @@
-# src/utils.py
-
 import spacy
 from difflib import SequenceMatcher
 
