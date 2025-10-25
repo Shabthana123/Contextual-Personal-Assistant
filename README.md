@@ -54,7 +54,7 @@ The core of the project is the **Ingestion & Organization Agent**, which process
 
 ## 🧠 Thinking Agent (Planned Implementation)
 
-A **Thinking Agent** is designed as the next stage of this framework. While it is not yet implemented, the architecture has been fully planned.
+A **Thinking Agent** is designed as the next stage of this framework. While it is not yet implemented fully, the architecture has been fully planned.
 
 **Design Goals:**
 

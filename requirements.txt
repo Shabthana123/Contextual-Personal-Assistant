@@ -8,6 +8,11 @@ torch==2.2.0
 
 # LangChain
 langchain==0.1.0
+langchain-community==0.0.16
+
+# # Free & Local Agentic Framework
+# crewai==0.28.0
+# crewai-tools==0.5.0
 
 # Web Interface
 streamlit==1.29.0
@@ -18,3 +23,4 @@ python-dotenv==1.0.0
 
 # Testing
 pytest==7.4.2
+pytest-mock==3.12.0

@@ -1,6 +1,7 @@
 import streamlit as st
 from src.db_manager import DBManager
 from src.ingestion_agent_lc import LangChainIngestionAgent
+from src.thinking_agent.agent import ThinkingAgent
 
 st.set_page_config(page_title="Contextual Personal Assistant")
 st.title("🧠 Contextual Personal Assistant")
@@ -11,9 +12,13 @@ if "db" not in st.session_state:
 
 if "agent" not in st.session_state:
     st.session_state.agent = LangChainIngestionAgent()
+    
+if "thinking_agent" not in st.session_state:
+    st.session_state.thinking_agent = ThinkingAgent()
 
 db = st.session_state.db
 agent = st.session_state.agent
+thinking_agent = st.session_state.thinking_agent
 
 st.markdown("## Add a new note")
 note = st.text_area(
@@ -43,3 +48,23 @@ else:
             st.write(f"- [{c['card_type']}] {c['description']}")
             if c.get('date_parsed'):
                 st.caption(f"date_parsed: {c['date_parsed']}  •  assignee: {c['assignee']}")
+
+# --- Thinking Agent Section ---
+st.markdown("## Thinking Agent Insights")
+
+if st.button("Run Thinking Agent Analysis"):
+    results = thinking_agent.run_analysis()
+    st.success("Thinking Agent analysis completed.")
+    st.json(results)
+
+# --- Display recent recommendations ---
+st.markdown("### Recent Recommendations")
+recs = thinking_agent.get_recent_recommendations(20)
+if not recs:
+    st.info("No recommendations found yet. Run analysis to generate suggestions.")
+else:
+    for r in recs:
+        kind = r['kind']
+        created_at = r['created_at']
+        st.write(f"**{kind}** (generated at {created_at})")
+        st.json(r['payload'])
