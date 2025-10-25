@@ -11,7 +11,7 @@ if "db" not in st.session_state:
 
 if "agent" not in st.session_state:
     st.session_state.agent = LangChainIngestionAgent()
-    
+
 db = st.session_state.db
 agent = st.session_state.agent
 
