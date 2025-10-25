@@ -14,7 +14,6 @@ if "agent" not in st.session_state:
     
 db = st.session_state.db
 agent = st.session_state.agent
-thinking_agent = st.session_state.thinking_agent
 
 st.markdown("## Add a new note")
 note = st.text_area(
